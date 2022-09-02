@@ -1,5 +1,5 @@
-[![Build Status](https://github.com/boldlink/<REPO_NAME>/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/boldlink/<REPO_NAME>/actions)
-[![Build Status](https://github.com/boldlink/<REPO_NAME>/actions/workflows/checkov.yml/badge.svg)](https://github.com/boldlink/<REPO_NAME>/actions)
+[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/boldlink/<REPO_NAME>/actions)
+[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/checkov.yml/badge.svg)](https://github.com/boldlink/<REPO_NAME>/actions)
 
 [<img src="https://avatars.githubusercontent.com/u/25388280?s=200&v=4" width="96"/>](https://boldlink.io)
 
