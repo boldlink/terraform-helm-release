@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - feat: Deploy charts from local files in complete example
 - feat: showcase postrender in main example
 
-## [0.1.0] - 2022-09-02
+## [1.0.0] - 2022-09-02
 ### Description
 - feat: Module code for helm-release
 
