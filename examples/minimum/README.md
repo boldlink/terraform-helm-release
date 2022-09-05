@@ -20,7 +20,9 @@ No providers.
 
 ## Modules
 
-No modules.
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_minimum_helm"></a> [minimum\_helm](#module\_minimum\_helm) | ./../../ | n/a |
 
 ## Resources
 
