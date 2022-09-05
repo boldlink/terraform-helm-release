@@ -12,7 +12,7 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14.11 |
-| <a name="requirement_helm"></a> [helm](#requirement\_helm) | >= 2.1 |
+| <a name="requirement_helm"></a> [helm](#requirement\_helm) | >=2.1 |
 
 ## Providers
 
@@ -20,7 +20,9 @@ No providers.
 
 ## Modules
 
-No modules.
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_complete_helm"></a> [complete\_helm](#module\_complete\_helm) | ./../../ | n/a |
 
 ## Resources
 

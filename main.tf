@@ -37,17 +37,17 @@ resource "helm_release" "main" {
   dynamic "set" {
     for_each = var.set
     content {
-      name  = each.value.name
-      value = each.value.value
-      type  = each.value.type
+      name  = set.value.name
+      value = set.value.value
+      type  = try(set.value.type, null)
     }
   }
   dynamic "set_sensitive" {
     for_each = var.set_sensitive
     content {
-      name  = each.value.name
-      value = each.value.value
-      type  = each.value.type
+      name  = set_sensitive.value.name
+      value = set_sensitive.value.value
+      type  = try(set_sensitive.value.type, null)
     }
   }
 
