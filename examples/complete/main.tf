@@ -1,4 +1,4 @@
-### To run ths example, export KUBE_CONFIG_PATH in the terminal then run terraform apply
+### To run this example, export KUBE_CONFIG_PATH in the terminal then run terraform apply
 module "complete_helm" {
   source           = "./../../"
   name             = "cert-manager"
