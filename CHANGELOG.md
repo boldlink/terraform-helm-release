@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 2022-09-02
 ### Description
-- feat: Module code for helm-release
+- Release: Module code for helm-release
 
 ## [0.1.0] - 2022-09-02
 ### Description
