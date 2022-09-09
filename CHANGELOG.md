@@ -20,8 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Description
 - feat: initial code commit
 
-[Unreleased]: https://github.com/boldlink/terraform-helm-release/compare/1.0.0...HEAD
-
+[Unreleased]: https://github.com/boldlink/terraform-helm-release/compare/1.1.0...HEAD
+[1.1.0]: https://github.com/boldlink/terraform-helm-release/releases/tag/1.1.0
 [1.0.0]: https://github.com/boldlink/terraform-helm-release/releases/tag/1.0.0
-
 [0.1.0]: https://github.com/boldlink/terraform-helm-release/releases/tag/0.1.0
