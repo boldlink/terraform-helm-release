@@ -1,4 +1,3 @@
-### To run this example, export KUBE_CONFIG_PATH in the terminal then run terraform apply
 module "complete_helm" {
   source           = "./../../"
   name             = "cert-manager"
@@ -14,5 +13,11 @@ module "complete_helm" {
       name  = "installCRDs"
       value = true
     },
+  ]
+
+  manifests = [
+    {
+      yaml_body = file("ngnx.yaml")
+    }
   ]
 }

@@ -35,12 +35,14 @@ module "minimum_helm" {
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14.11 |
 | <a name="requirement_helm"></a> [helm](#requirement\_helm) | >= 2.1 |
+| <a name="requirement_kubectl"></a> [kubectl](#requirement\_kubectl) | >= 1.14.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_helm"></a> [helm](#provider\_helm) | 2.6.0 |
+| <a name="provider_kubectl"></a> [kubectl](#provider\_kubectl) | 1.14.0 |
 
 ## Modules
 
@@ -51,6 +53,8 @@ No modules.
 | Name | Type |
 |------|------|
 | [helm_release.main](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
+| [kubectl_manifest.main](https://registry.terraform.io/providers/gavinbunney/kubectl/latest/docs/resources/manifest) | resource |
+| [kubectl_manifest.multi_doc](https://registry.terraform.io/providers/gavinbunney/kubectl/latest/docs/resources/manifest) | resource |
 
 ## Inputs
 
@@ -69,7 +73,9 @@ No modules.
 | <a name="input_force_update"></a> [force\_update](#input\_force\_update) | (Optional) Force resource update through delete/recreate if needed. Defaults to false. | `bool` | `false` | no |
 | <a name="input_keyring"></a> [keyring](#input\_keyring) | (Optional) Location of public keys used for verification. Used only if verify is true. Defaults to /.gnupg/pubring.gpg in the location set by home | `string` | `null` | no |
 | <a name="input_lint"></a> [lint](#input\_lint) | (Optional) Run the helm chart linter during the plan. Defaults to false. | `bool` | `false` | no |
+| <a name="input_manifests"></a> [manifests](#input\_manifests) | Configuration of manifest file to apply | `any` | `[]` | no |
 | <a name="input_max_history"></a> [max\_history](#input\_max\_history) | (Optional) Maximum number of release versions stored per release. Defaults to 0 (no limit). | `number` | `0` | no |
+| <a name="input_multi_doc_manifests"></a> [multi\_doc\_manifests](#input\_multi\_doc\_manifests) | Configuration of map for multi-document yaml file to apply | `map(string)` | `{}` | no |
 | <a name="input_name"></a> [name](#input\_name) | (Required) Release name. | `string` | n/a | yes |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | (Optional) The namespace to install the release into. Defaults to default. | `string` | `"default"` | no |
 | <a name="input_postrender"></a> [postrender](#input\_postrender) | (Optional) Configure a command to run after helm renders the manifest which can alter the manifest contents. | `list(any)` | `[]` | no |

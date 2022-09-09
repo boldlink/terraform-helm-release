@@ -20,6 +20,18 @@ variable "chart" {
   type        = string
 }
 
+variable "manifests" {
+  type        = any
+  description = "Configuration of manifest file to apply"
+  default     = []
+}
+
+variable "multi_doc_manifests" {
+  type        = map(string)
+  description = "Configuration of map for multi-document yaml file to apply"
+  default     = {}
+}
+
 variable "repository_key_file" {
   description = "(Optional) The repositories cert key file"
   type        = string

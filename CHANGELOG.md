@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - feat: Deploy charts from local files in complete example
 - feat: showcase postrender in main example
 
+## [1.1.0] - 2022-09-09
+### Description
+- feat: Add kubectl feature and provider for running/applying custom files/provider settings. Equivalent to `kubectl apply -f`
+
 ## [1.0.0] - 2022-09-02
 ### Description
 - Release: Module code for helm-release
