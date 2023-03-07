@@ -1,5 +1,11 @@
-[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/boldlink/<REPO_NAME>/actions)
-[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/checkov.yml/badge.svg)](https://github.com/boldlink/<REPO_NAME>/actions)
+[![License](https://img.shields.io/badge/License-Apache-blue.svg)](https://github.com/boldlink/terraform-helm-release/blob/main/LICENSE)
+[![Latest Release](https://img.shields.io/github/release/boldlink/terraform-helm-release.svg)](https://github.com/boldlink/terraform-helm-release/releases/latest)
+[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/update.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
+[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/release.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
+[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
+[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/pr-labeler.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
+[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/checkov.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
+[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/auto-badge.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
 
 [<img src="https://avatars.githubusercontent.com/u/25388280?s=200&v=4" width="96"/>](https://boldlink.io)
 

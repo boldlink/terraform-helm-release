@@ -1,5 +1,11 @@
-[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/boldlink/<REPO_NAME>/actions)
-[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/checkov.yml/badge.svg)](https://github.com/boldlink/<REPO_NAME>/actions)
+[![License](https://img.shields.io/badge/License-Apache-blue.svg)](https://github.com/boldlink/terraform-helm-release/blob/main/LICENSE)
+[![Latest Release](https://img.shields.io/github/release/boldlink/terraform-helm-release.svg)](https://github.com/boldlink/terraform-helm-release/releases/latest)
+[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/update.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
+[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/release.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
+[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
+[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/pr-labeler.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
+[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/checkov.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
+[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/auto-badge.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
 
 [<img src="https://avatars.githubusercontent.com/u/25388280?s=200&v=4" width="96"/>](https://boldlink.io)
 
@@ -9,14 +15,14 @@
 
 This module can be used used to deploy helm packages to a Kubernetes cluster.
 
-Examples available [`here`]github.com/boldlink/terraform-helm-release/tree/main/examples)
+Examples available [`here`](./examples)
 
 ## Usage
-*NOTE*: These examples use the latest version of this module
+**NOTE**: These examples use the latest version of this module
 
-```console
+```hcl
 module "minimum_helm" {
-  source     = "./../../"
+  source     = "boldlink/release/helm"
   name       = "my-redis-release"
   repository = "https://charts.bitnami.com/bitnami"
   chart      = "redis"
@@ -40,7 +46,7 @@ module "minimum_helm" {
 
 | Name | Version |
 |------|---------|
-| <a name="provider_helm"></a> [helm](#provider\_helm) | 2.6.0 |
+| <a name="provider_helm"></a> [helm](#provider\_helm) | 2.9.0 |
 
 ## Modules
 
