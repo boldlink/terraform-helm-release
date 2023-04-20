@@ -4,6 +4,7 @@
 [![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/release.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
 [![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
 [![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/pr-labeler.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
+[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/module-examples-tests.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
 [![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/checkov.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
 [![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/auto-badge.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
 
