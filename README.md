@@ -47,7 +47,7 @@ module "minimum_helm" {
 
 | Name | Version |
 |------|---------|
-| <a name="provider_helm"></a> [helm](#provider\_helm) | 2.9.0 |
+| <a name="provider_helm"></a> [helm](#provider\_helm) | 2.10.1 |
 
 ## Modules
 
