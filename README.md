@@ -4,9 +4,7 @@
 [![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/release.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
 [![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
 [![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/pr-labeler.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
-[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/module-examples-tests.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
 [![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/checkov.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
-[![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/auto-merge.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
 [![Build Status](https://github.com/boldlink/terraform-helm-release/actions/workflows/auto-badge.yaml/badge.svg)](https://github.com/boldlink/terraform-helm-release/actions)
 
 [<img src="https://avatars.githubusercontent.com/u/25388280?s=200&v=4" width="96"/>](https://boldlink.io)
@@ -15,7 +13,11 @@
 
 ## Description
 
-This module can be used used to deploy helm packages to a Kubernetes cluster.
+This terraform module deploys helm packages to a Kubernetes cluster.
+
+### Why use this Module over standard resources
+- Has elaborate examples that you can use to deploy helm charts within a very short time.
+- Follows aws security best practices and uses checkov to ensure compliance.
 
 Examples available [`here`](./examples)
 
@@ -25,6 +27,7 @@ Examples available [`here`](./examples)
 ```hcl
 module "minimum_helm" {
   source     = "boldlink/release/helm"
+  version    = <insert_latest_version_here>
   name       = "my-redis-release"
   repository = "https://charts.bitnami.com/bitnami"
   chart      = "redis"
@@ -48,7 +51,7 @@ module "minimum_helm" {
 
 | Name | Version |
 |------|---------|
-| <a name="provider_helm"></a> [helm](#provider\_helm) | 2.10.1 |
+| <a name="provider_helm"></a> [helm](#provider\_helm) | 2.6.0 |
 
 ## Modules
 
@@ -98,14 +101,16 @@ No modules.
 | <a name="input_timeout"></a> [timeout](#input\_timeout) | (Optional) Time in seconds to wait for any individual kubernetes operation (like Jobs for hooks). Defaults to 300 seconds. | `number` | `300` | no |
 | <a name="input_values"></a> [values](#input\_values) | (Optional) List of values in raw yaml to pass to helm. Values will be merged, in order, as Helm does with multiple -f options. | `list(any)` | `[]` | no |
 | <a name="input_verify"></a> [verify](#input\_verify) | (Optional) Verify the package before installing it. Helm uses a provenance file to verify the integrity of the chart; this must be hosted alongside the chart. For more information see the Helm Documentation. Defaults to false. | `bool` | `false` | no |
-| <a name="input_wait"></a> [wait](#input\_wait) | (Optional) Will wait until all resources are in a ready state before marking the release as successful. It will wait for as long as timeout. Defaults to true. | `bool` | `false` | no |
+| <a name="input_wait"></a> [wait](#input\_wait) | (Optional) Will wait until all resources are in a ready state before marking the release as successful. It will wait for as long as timeout. Defaults to true. | `bool` | `true` | no |
 | <a name="input_wait_for_jobs"></a> [wait\_for\_jobs](#input\_wait\_for\_jobs) | (Optional) If wait is enabled, will wait until all Jobs have been completed before marking the release as successful. It will wait for as long as timeout. Defaults to false. | `bool` | `false` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
+| <a name="output_manifest"></a> [manifest](#output\_manifest) | The rendered manifest of the release as JSON. Enable the manifest experiment to use this feature. |
 | <a name="output_metadata"></a> [metadata](#output\_metadata) | Block status of the deployed release. |
+| <a name="output_status"></a> [status](#output\_status) | Status of the release. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Third party software
@@ -123,9 +128,12 @@ This repository uses third party software:
 
 ### Makefile
 The makefile contained in this repo is optimized for linux paths and the main purpose is to execute testing for now.
+
+Export KUBE_CONFIG_PATH in the terminal then run the commands
+
 * Create all tests:
 `$ make tests`
 * Clean all tests:
 `$ make clean`
 
-#### BOLDLink-SIG 2022
+#### BOLDLink-SIG 2023

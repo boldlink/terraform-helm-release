@@ -6,7 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 - feat: Deploy charts from local files in complete example
-- feat: showcase postrender in main example
+- feat: showcase postrender, repository_key_file,repository_cert_file, repository_ca_file, repository_username,repository_password in examples
+
+## [1.0.2] - 2023-12-21
+- showcased more attributes in the complete example
+- added another example that has values and set sensitive attributes
+- updated module's main README.
+- added more module outputs
 
 ## [1.0.1] - 2023-02-28
 ### Description

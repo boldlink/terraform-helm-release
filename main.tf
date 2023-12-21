@@ -54,8 +54,8 @@ resource "helm_release" "main" {
   dynamic "postrender" {
     for_each = var.postrender
     content {
-      binary_path = each.value.binary_path
-      #args        = each.value.args
+      binary_path = postrender.value.binary_path
+      args        = try(postrender.value.args, null)
     }
   }
 }
