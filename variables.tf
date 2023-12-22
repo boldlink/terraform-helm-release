@@ -155,7 +155,7 @@ variable "disable_openapi_validation" {
 variable "wait" {
   description = "(Optional) Will wait until all resources are in a ready state before marking the release as successful. It will wait for as long as timeout. Defaults to true."
   type        = bool
-  default     = false
+  default     = true
 }
 
 variable "wait_for_jobs" {
